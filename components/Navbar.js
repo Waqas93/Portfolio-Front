@@ -16,7 +16,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className=" lg:block">
+        <div className="lg:block">
 
           {/* Normal View */}
           <ul className="flex items-center">
