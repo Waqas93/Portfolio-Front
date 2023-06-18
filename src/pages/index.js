@@ -772,8 +772,8 @@ export default function Home({blogs}) {
      {blogs.map((item) => (
       <Link key={item.slug} href={"/blog/" + item.slug.current} className="shadow">
         <div
-          // style={{backgroundImage: 'url(/assets/img/post-01.png)'}}
-          style={{backgroundImage: `url(${builder.image(item.blogimage).width(200).url()})`,backgroundRepeat: 'no-repeat',backgroundPosition: 'center',backgroundSize: 'cover'}}
+           //style={{backgroundImage: 'url(/assets/img/post-01.png)'}}
+          style={{backgroundImage: `url(${builder.image(item.blogimage).width(200).url()||'url(/assets/img/post-01.png)'})`}}
           className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
         >
           <span
