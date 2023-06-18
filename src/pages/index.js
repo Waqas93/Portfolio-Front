@@ -102,6 +102,7 @@ export default function Home({blogs}) {
       <div 
       x-data="{triggerNavItem(id) {$scroll(id)},
     triggerMobileNavItem(id) {mobileMenu = false;this.triggerNavItem(id)}}">
+      <div id="main" class="relative"></div>
 
       <Navbar/>
 

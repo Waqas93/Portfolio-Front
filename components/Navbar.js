@@ -8,6 +8,7 @@ export default function Navbar() {
   };
 
   return (
+    
     <div style={{ backgroundColor: "#5540af" }}>
       <div className="container flex items-center justify-between mx-auto" style={{ height: "70px" }}>
         <div className="mx-12">
@@ -16,7 +17,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="lg:block">
+        <div className="hidden lg:block">
 
           {/* Normal View */}
           <ul className="flex items-center">
