@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Navigationbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" style={{ backgroundColor: "#0d6efd",height: "70px" }}>
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" style={{ backgroundColor: "#0d6efd"}}>
       <Container>
         <Navbar.Brand href="/" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
