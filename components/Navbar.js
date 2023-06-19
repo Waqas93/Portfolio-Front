@@ -1,151 +1,29 @@
-import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-export default function Navbar() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+function Navigationbar() {
   return (
-    
-    <div style={{ backgroundColor: "#5540af" }}>
-      <div className="container flex items-center justify-between mx-auto" style={{ height: "70px" }}>
-        <div className="mx-12">
-          <a href="/">
-            <h2 className="text-white text-lg font-bold">Portfolio</h2>
-          </a>
-        </div>
-
-        <div className="hidden lg:block">
-
-          {/* Normal View */}
-          <ul className="flex items-center">
-            <li className="group pl-6">
-              <a
-                href="/#about"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                About
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#services"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Services
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#portfolio"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Portfolio
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#work"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Work
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#blog"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Blog
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#contact"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Contact
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
-        <div className="block lg:hidden">
-          <button onClick={toggleMobileMenu}>
-            <i className="bx bx-menu text-4xl text-white"></i>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden">
-          <ul className="flex flex-col items-center">
-            <li className="group">
-              <a
-                href="/#about"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                About
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#services"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Services
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#portfolio"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Portfolio
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#work"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Work
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#blog"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Blog
-              </a>
-            </li>
-
-            <li className="group pl-6">
-              <a
-                href="/#contact"
-                className="cursor-pointer px-2 py-1 text-white font-semibold uppercase hover:bg-yellow-500"
-              >
-                Contact
-              </a>
-            </li>
-
-          </ul>
-        </div>
-      )}
-    </div>
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" style={{ backgroundColor: "#0d6efd",height: "70px" }}>
+      <Container>
+        <Navbar.Brand href="/" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Portfolio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+          
+          </Nav>
+          <Nav>
+            <Nav.Link href="/#about" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">About</Nav.Link>
+            <Nav.Link href="/#services" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Services</Nav.Link>
+            <Nav.Link href="/#portfolio" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Portfolio</Nav.Link>
+            <Nav.Link href="/#work" className="cursor-pointer px-2 text-white py-1  font-semibold uppercase hover:bg-yellow-500">Work</Nav.Link>
+            <Nav.Link href="/#blog" className="cursor-pointer px-2 text-white py-1  font-semibold uppercase hover:bg-yellow-500">Blog</Nav.Link>
+            <Nav.Link href="/#contact" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
+
+export default Navigationbar;

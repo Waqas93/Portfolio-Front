@@ -2,7 +2,7 @@ import React from "react";
 import { createClient } from "next-sanity"
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
-import Navbar from "../../components/Navbar";
+import Navigationbar from '../../components/Navbar';
 
 export default function Blogs({ blogs }) {
   const clint = createClient({
@@ -14,7 +14,7 @@ export default function Blogs({ blogs }) {
 
   return (
     <div>
-      <Navbar />
+      <Navigationbar />
       <div className="bg-grey-50 my-12" id="blog">
         <div className="container mx-auto my-8 py-16 md:py-20">
           <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">

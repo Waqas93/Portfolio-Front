@@ -4,7 +4,7 @@ import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import Navbar from "../../../components/Navbar";
 
-export default function Page({blog}) {
+export default function Page({ blog }) {
   const router = useRouter();
   const { slug } = router.query;
 
@@ -54,6 +54,14 @@ export default function Page({blog}) {
           media="screen"
           rel="stylesheet"
         />
+
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        ></link>
+
         <script
           defer
           src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
@@ -72,19 +80,15 @@ export default function Page({blog}) {
       <div id="main" class="relative">
         <div>
           <div class="w-full z-50 top-0 py-3 sm:py-5  bg-primary ">
-
-        <div>
-          <Navbar/>
-        </div>
-
-
-
+            <div>
+              <Navbar />
+            </div>
           </div>
 
           <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-o o mobileMenu">
             <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
               <button class="absolute top-0 right-0 mt-4 mr-4">
-              <h2 className='text-white text-lg font-bold'>Portfolio</h2>
+                <h2 className="text-white text-lg font-bold">Portfolio</h2>
               </button>
 
               <ul class="mt-8 flex flex-col">
@@ -114,7 +118,6 @@ export default function Page({blog}) {
                     Portfolio
                   </a>
                 </li>
-
 
                 <li class="py-2">
                   <a
@@ -164,7 +167,8 @@ export default function Page({blog}) {
                       li: ({ children }) => (
                         <li classNameName="special-list-item">{children}</li>
                       ),
-                    }}/>
+                    }}
+                  />
                 </div>
               </div>
 
@@ -182,8 +186,6 @@ export default function Page({blog}) {
                   <i class="bx bx-right-arrow-alt text-2xl text-primary"></i>
                 </a>
               </div>
-
-
             </div>
           </div>
         </div>

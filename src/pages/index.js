@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import {createClient} from "next-sanity";
 import imageUrlBuilder from '@sanity/image-url';
 import Link from 'next/link';
-import Navbar from '../../components/Navbar';
+import Navigationbar from '../../components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -64,7 +64,11 @@ export default function Home({blogs}) {
     href="https://fonts.gstatic.com"
     rel="preconnect"
   />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous"></link>
+  
   <link
     as="style"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
@@ -99,101 +103,10 @@ export default function Home({blogs}) {
   
   {/* main code */}
   <div id="main" className="relative">
-      <div 
-      x-data="{triggerNavItem(id) {$scroll(id)},
-    triggerMobileNavItem(id) {mobileMenu = false;this.triggerNavItem(id)}}">
-      <div id="main" class="relative"></div>
-
-      <Navbar/>
-
       <div>
 
+      <Navigationbar/>
 
-
-        
-      </div>
-
-   <div
-  className="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden
-   pointer-events-auto' mobileMenu ">
-  <div
-    className="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
-  >
-    <button
-      className="absolute top-0 right-0 mt-4 mr-4"
-     
-    >
-      <img src="/assets/img/icon-close.svg" className="h-10 w-auto" alt="" />
-    </button>
-
-    <ul className="mt-8 flex flex-col">
-      
-      <li className="py-2">
-        
-        <span
-         
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >About</span
-        >
-        
-      </li>
-      
-      <li className="py-2">
-        
-        <span
-         
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Services</span
-        >
-        
-      </li>
-      
-      <li className="py-2">
-        
-        <span
-         
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Portfolio</span
-        >
-        
-      </li>
-      
-      
-      <li className="py-2">
-        
-        <span
-       
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Work</span
-        >
-        
-      </li>
-      
-      <li className="py-2">
-        
-        <span
-         
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Blog</span
-        >
-        
-      </li>
-      
-      <li className="py-2">
-        
-        <span
-          
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Contact</span
-        >
-        
-      </li>
-      
-    </ul>
-  </div>
-</div>
-   
-   
 <div>
 <div className="relative bg-cover bg-center bg-no-repeat py-8" style={{backgroundImage: 'url(/assets/img/bg-hero.jpg)'}}>
       
@@ -225,8 +138,8 @@ export default function Home({blogs}) {
             <i className="bx bx-chevron-right text-3xl text-yellow"></i>
           </div>
         </div>
-        <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-          <a href="https://web.facebook.com/vickybadsha323"><i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i></a>
+        <div className="flex items-center justify-center pt-2 pl-2 sm:justify-start sm:pt-0">
+          <a href="https://web.facebook.com/vickybadsha323"><i className="bx bxl-facebook-square text-2xl text-white hover: text-yellow "></i></a>
           <a href="https://twitter.com/Muhamma34800760" className="pl-4"><i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i></a>
           <a href="https://www.linkedin.com/in/mh-waqas-anjum/" className="pl-4"><i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i></a>
           <a href="https://www.instagram.com/vickybadsha323/" className="pl-4"><i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i></a>
@@ -911,17 +824,16 @@ export default function Home({blogs}) {
   </div>
 </div>
 </div>
-
 <div className="bg-primary">
-  <div className="container flex flex-col justify-between py-6 sm:flex-row">
-    <p className="text-center font-body text-white md:text-left">
-      © Copyright 2022. All right reserved.
-    </p>
-    <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-      <a href="/">
-        <i
-          className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
-        ></i>
+  <div className="container flex flex-col justify-between py-3 sm:flex-row">
+    <div className="flex items-center">
+      <p className="text-center font-body text-white md:text-left">
+        © 2022. All rights reserved.
+      </p>
+    </div>
+    <div className="flex items-center justify-center pt-2  sm:justify-start sm:pt-0">
+      <a href="/" className="pl-4">
+        <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
       </a>
       <a href="/" className="pl-4">
         <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
@@ -938,6 +850,7 @@ export default function Home({blogs}) {
     </div>
   </div>
 </div>
+
            
 </div>
 </div>
