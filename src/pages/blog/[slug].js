@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
-import Navbar from "../../../components/Navbar";
+import Navigationbar from "../../../components/Navbar";
 
 export default function Page({ blog }) {
   const router = useRouter();
@@ -81,7 +81,7 @@ export default function Page({ blog }) {
         <div>
           <div class="w-full z-50 top-0 py-3 sm:py-5  bg-primary ">
             <div>
-              <Navbar />
+              <Navigationbar/>
             </div>
           </div>
 
