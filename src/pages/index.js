@@ -412,7 +412,7 @@ export default function Home() {
     className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
   >
     <a
-      href="/"
+      href="https://github.com/Waqas93/onlinefoodstore"
       className="mx-auto transform transition-all hover:scale-105 md:mx-0"
     >
       <img
@@ -423,7 +423,7 @@ export default function Home() {
     </a>
 
     <a
-   href="/"
+   href="https://github.com/Waqas93/BrowserLocalStorageProject"
    className="mx-auto transform transition-all hover:scale-105 md:mx-0"
  >
    <img
@@ -434,17 +434,7 @@ export default function Home() {
  </a>
  
     <a
-      href="/"
-      className="mx-auto transform transition-all hover:scale-105 md:mx-0"
-    >
-      <img
-        src="/assets/img/portfolio-stripe.jpeg"
-        className="w-full shadow"
-        alt="portfolio image"
-      />
-    </a>
-    <a
-      href="/"
+      href="https://github.com/Waqas93/URLInputshortner"
       className="mx-auto transform transition-all hover:scale-105 md:mx-0"
     >
       <img

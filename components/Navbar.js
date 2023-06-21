@@ -6,7 +6,7 @@ function Navigationbar() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" style={{ backgroundColor: "#0d6efd" }}>
       <Container>
-        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
