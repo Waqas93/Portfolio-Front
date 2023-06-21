@@ -1,19 +1,11 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google'
-import {createClient} from "next-sanity";
-import imageUrlBuilder from '@sanity/image-url';
 import Link from 'next/link';
 import Navigationbar from '../../components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({blogs}) {
-  const clint = createClient({
-    projectId: "pk7y0923",
-    dataset: "production",
-    useCdn : true
-    });
-    const builder = imageUrlBuilder(clint)
+export default function Home() {
   return (
   <><>
   <script src="/assets/js/main.js"></script>
@@ -23,8 +15,7 @@ export default function Home({blogs}) {
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"
-  />
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
   <title>Portfolio</title>
 
@@ -32,10 +23,7 @@ export default function Home({blogs}) {
 
   <meta property="og:locale" content="en_US" />
 
-  <link
-    rel="canonical"
-    href="//"
-  />
+  <link rel="canonical" href="//" />
 
   <meta
     property="og:url"
@@ -120,6 +108,7 @@ export default function Home({blogs}) {
         className="h-48 rounded-full sm:h-56"
         alt="author"
       />
+
     </div>
     <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
       <h1
@@ -347,58 +336,7 @@ export default function Home({blogs}) {
         </p>
       </div>
     </div>
-    <div className="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-        <div className="hidden group-hover:block">
-          <img
-            src="/assets/img/icon-content-white.svg"
-            alt="content marketing icon"
-          />
-        </div>
-        <div className="block group-hover:hidden">
-          <img
-            src="/assets/img/icon-content-black.svg"
-            alt="content marketing icon"
-          />
-        </div>
-      </div>
-      <div className="text-center">
-        <h3
-          className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-        >
-          Technical Writing
-        </h3>
-        <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-        The customer service process is of utmost importance and requires careful attention from customers.
-        </p>
-      </div>
-    </div>
-    <div className="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-        <div className="hidden group-hover:block">
-          <img
-            src="/assets/img/icon-mobile-white.svg"
-            alt="Mobile Application icon"
-          />
-        </div>
-        <div className="block group-hover:hidden">
-          <img
-            src="/assets/img/icon-mobile-black.svg"
-            alt="Mobile Application icon"
-          />
-        </div>
-      </div>
-      <div className="text-center">
-        <h3
-          className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-        >
-          Mobile Development
-        </h3>
-        <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-        The customer service process is of utmost importance and requires careful attention from customers.
-        </p>
-      </div>
-    </div>
+
     <div className="group rounded px-8 py-12 shadow hover:bg-primary">
       <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div className="hidden group-hover:block">
@@ -669,45 +607,6 @@ export default function Home({blogs}) {
   </div>
 </div>
 
-<div className="bg-grey-50" id="blog">
-  <div className="container py-16 md:py-20">
-    <h2
-      className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-    >
-      I also like to write
-    </h2>
-    <h4
-      className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-    >
-      Check out my latest posts!
-    </h4>
-    <div className="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10">
-     
-     {blogs.map((item) => (
-      <Link key={item.slug} href={"/blog/" + item.slug.current} className="shadow">
-        <div
-           //style={{backgroundImage: 'url(/assets/img/post-01.png)'}}
-          style={{backgroundImage: `url(${builder.image(item.blogimage).width(200).url()||'url(/assets/img/post-01.png)'})`}}
-          className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-        >
-          <span
-            className="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
-          ></span>
-          <span
-            className="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
-            >Read More</span
-          >
-        </div>
-        <div className="bg-white py-6 px-5 xl:py-8">
-          <span className="block font-body text-lg font-semibold text-black">{item.title}</span>
-          <span className="block pt-2 font-body text-grey-20">{item.metadesc}</span>
-        </div>
-      </Link>
-      ))}
-    </div>
-  </div>
-</div>
-
 <div className="container py-16 md:py-20" id="contact">
   <h2
     className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
@@ -856,20 +755,5 @@ export default function Home({blogs}) {
 </div>
 </></>
 )
-}
-
-export async function getServerSideProps(content){
-  const clint = createClient({
-        projectId: "pk7y0923",
-        dataset: "production",
-        useCdn : false
-  });
-  const quarry = '*[_type == "blog"][0...3]';
-  const blogs = await clint.fetch(quarry);
-return {
-  props: {
-    blogs
-  }
-}
 }
 

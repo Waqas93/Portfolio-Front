@@ -16,9 +16,7 @@ function Navigationbar() {
           <Nav.Link href="/#about" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">About</Nav.Link>
             <Nav.Link href="/#services" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Services</Nav.Link>
             <Nav.Link href="/#portfolio" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Portfolio</Nav.Link>
-            <Nav.Link href="/#work" className="cursor-pointer px-2 text-white py-1  font-semibold uppercase hover:bg-yellow-500">Work</Nav.Link>
-            <Nav.Link href="/#blog" className="cursor-pointer px-2 text-white py-1  font-semibold uppercase hover:bg-yellow-500">Blog</Nav.Link>
-            <Nav.Link href="/#contact" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Contact</Nav.Link>
+            <Nav.Link href="/#work" className="cursor-pointer px-2 text-white py-1  font-semibold uppercase hover:bg-yellow-500">Work</Nav.Link>            <Nav.Link href="/#contact" className="cursor-pointer text-white px-2 py-1  font-semibold uppercase hover:bg-yellow-500">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
