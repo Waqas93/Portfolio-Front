@@ -106,7 +106,7 @@ export default function Home() {
 
     <span className="shrink-0">
   <img
-    src="/assets/img/logo-contour.jpg"
+    src="/assets/img/profile.jpg"
     className="h-48 rounded-full sm:h-56"
     alt="company logo"
   />
