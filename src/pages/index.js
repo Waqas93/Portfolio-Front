@@ -434,7 +434,7 @@ export default function Home() {
  </a>
  
     <a
-      href="https://github.com/Waqas93/URLInputshortner"
+      href="https://vercel.com/waqas93/url-inputshortner"
       className="mx-auto transform transition-all hover:scale-105 md:mx-0"
     >
       <img
@@ -624,7 +624,7 @@ export default function Home() {
         className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
         placeholder="Email"
         type="text"
-        id="email"
+        id="waqasanjum93@gmail.com"
       />
     </div>
     <textarea
